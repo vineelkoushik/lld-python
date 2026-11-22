@@ -1,0 +1,14 @@
+#class Method
+class Employee:
+    company = "Google"
+    #A class method is a method that operates on the class itself rather than on individual object instances.
+    #The key difference from an instance method is that a class method receives cls as its first parameter instead of self
+    @classmethod
+    def change_company(cls, new_company):
+        cls.company = new_company
+e1 = Employee()
+e2 = Employee()
+Employee.change_company("Microsoft")
+print(Employee.company)
+print(e1.company)
+print(e2.company)
